@@ -1,0 +1,15 @@
+<section class="language-selector-container">
+    <app-language-selector></app-language-selector>
+</section>
+<div
+    *ngIf="posts$ | async as posts"
+    class="cards-container">
+    <div *ngFor="let post of posts">
+        <app-post-card
+            [title]="post.title"
+            [lead]="post.lead"
+            [imagePath]="post.imagePath"
+            [id]="post.id">
+        </app-post-card>
+    </div>
+</div>

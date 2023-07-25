@@ -1,0 +1,15 @@
+
+<section class="lang-select">
+    <mat-label>Select your language:</mat-label>
+    <mat-form-field>
+        <mat-select
+            [(value)]="defaultValue"
+            (selectionChange)="changeLang($event.value)">
+            <mat-option
+                *ngFor="let food of languages"
+                [value]="food.key">
+                {{ food.value }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</section>
